@@ -9,13 +9,9 @@ like crap.
 Installation
 ------------
 
-Install from ``pypi`` using ``pip``::
+Install using ``pip``::
 
-    pip install --user cmake_format
-
-or::
-
-    sudo pip install cmake_format
+    pip install https://github.com/umaumax/cmake_format/archive/master.tar.gz
 
 -----
 Usage

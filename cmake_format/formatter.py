@@ -71,9 +71,10 @@ def format_comment_lines(node, config, line_width):
     if token.type == TokenType.COMMENT:
       inlines.append(token.spelling.strip().lstrip('#'))
 
-  items = markup.parse(inlines)
-  markup_lines = markup.format_items(config, max(10, line_width - 2), items)
-  return ["#" + (" " * len(line[:1])) + line for line in markup_lines]
+#   items = markup.parse(inlines)
+#   markup_lines = markup.format_items(config, max(10, line_width - 2), items)
+#   return ["#" + (" " * len(line[:1])) + line for line in markup_lines]
+  return ["#" + (" " * len(line[:1])) + line for line in inlines]
 
 
 def normalize_line_endings(instr):
