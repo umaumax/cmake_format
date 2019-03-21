@@ -13,6 +13,11 @@ Install using ``pip``::
 
     pip install https://github.com/umaumax/cmake_format/archive/master.tar.gz
 
+or
+
+    git clone https://github.com/umaumax/cmake_format.git
+    pip install .
+
 -----
 Usage
 -----
