@@ -224,7 +224,10 @@ def get_fn_spec():
           "SOURCE_DIR": ONE_OR_MORE,
           "BINARY_DIR": ONE_OR_MORE,
           "INSTALL_DIR": ONE_OR_MORE,
-          "DOWNLOAD_COMMAND": ONE_OR_MORE,
+          "DOWNLOAD_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "URL": ONE_OR_MORE,
           "URL_HASH": ONE_OR_MORE,
           "URL_MD5": ONE_OR_MORE,
@@ -259,11 +262,23 @@ def get_fn_spec():
           "CVS_REPOSITORY": ONE_OR_MORE,
           "CVS_MODULE": ONE_OR_MORE,
           "CVS_TAG": ONE_OR_MORE,
-          "UPDATE_COMMAND": ONE_OR_MORE,
+          "UPDATE_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "UPDATE_DISCONNECTED": ONE_OR_MORE,
-          "PATCH_COMMAND": ONE_OR_MORE,
-          "CONFIGURE_COMMAND": ONE_OR_MORE,
-          "CMAKE_COMMAND": ONE_OR_MORE,
+          "PATCH_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
+          "CONFIGURE_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
+          "CMAKE_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "CMAKE_GENERATOR": ONE_OR_MORE,
           "CMAKE_GENERATOR_PLATFORM": ONE_OR_MORE,
           "CMAKE_GENERATOR_TOOLSET": ONE_OR_MORE,
@@ -272,12 +287,21 @@ def get_fn_spec():
           "CMAKE_CACHE_ARGS": ONE_OR_MORE,
           "CMAKE_CACHE_DEFAULT_ARGS": ONE_OR_MORE,
           "SOURCE_SUBDIR": ONE_OR_MORE,
-          "BUILD_COMMAND": ONE_OR_MORE,
+          "BUILD_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "BUILD_IN_SOURCE": ONE_OR_MORE,
           "BUILD_ALWAYS": ONE_OR_MORE,
           "BUILD_BYPRODUCTS": ONE_OR_MORE,
-          "INSTALL_COMMAND": ONE_OR_MORE,
-          "TEST_COMMAND": ONE_OR_MORE,
+          "INSTALL_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
+          "TEST_COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "TEST_BEFORE_INSTALL": ONE_OR_MORE,
           "TEST_AFTER_INSTALL": ONE_OR_MORE,
           "TEST_EXCLUDE_FROM_MAIN": ONE_OR_MORE,
@@ -301,8 +325,10 @@ def get_fn_spec():
           "STEP_TARGETS": ONE_OR_MORE,
           "INDEPENDENT_STEP_TARGETS": ONE_OR_MORE,
           "LIST_SEPARATOR": ONE_OR_MORE,
-          "COMMAND": ONE_OR_MORE,
-          "COMMAND": ONE_OR_MORE,
+          "COMMAND": dict(
+              pargs=ONE_OR_MORE,
+              kwargs=[('ARGS', ZERO_OR_MORE)]
+          ),
           "COMMENT": ONE_OR_MORE,
           "DEPENDEES": ONE_OR_MORE,
           "DEPENDERS": ONE_OR_MORE,
