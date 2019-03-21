@@ -13,7 +13,9 @@ Install using ``pip``::
 
     pip install https://github.com/umaumax/cmake_format/archive/master.tar.gz
 
-or::
+or
+
+.. code:: text
 
     git clone https://github.com/umaumax/cmake_format.git
     pip install .
